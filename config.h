@@ -73,13 +73,17 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = {"firefox", NULL };
 // static const char *screenshotcmd[] = {"flameshot",  NULL};
 static const char *filemgr[] = {"nautilus", NULL};
+static const char *volmgr[] = {"myxer", NULL};
+static const char *screenlock[] = { "i3lock-fancy-rapid", "9", "30", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_t, 	   spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,	   {.v = browsercmd}},
+	{ MODKEY,			XK_v,	   spawn,	   {.v = volmgr}},
 	{ MODKEY,			XK_f,	   spawn,	   {.v = filemgr}},
+	{ MODKEY|ShiftMask,		XK_Escape, spawn,	   {.v = screenlock}},
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
