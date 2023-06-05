@@ -24,3 +24,5 @@ I will add more patches and shortcuts as soon as I integrate them.
 + colors
 + Screenshot shortcut
 + .xinitrc
++ Notification using dunst
++ DWM bar modifications (Battery, Available Ram, Time)
