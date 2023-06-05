@@ -1,6 +1,7 @@
 # DWM
 
 My build of DWM. The suckless X window manager.
+I will add more patches and shortcuts as soon as I integrate them.
 
 ### Shortcuts
 + Browser - super + b
@@ -16,3 +17,10 @@ My build of DWM. The suckless X window manager.
 
 + Navigate to the DWM directory and enter:`sudo make clean install`
 + Append to .xinitrc: `exec dwm`
+
+### TODO
+
++ Font size and style change
++ colors
++ Screenshot shortcut
++ .xinitrc
