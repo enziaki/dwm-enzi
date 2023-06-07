@@ -71,10 +71,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = {"firefox", NULL };
-// static const char *screenshotcmd[] = {"flameshot",  NULL};
+static const char *screenshotcmd[] = {"flameshot", "full", "--path", "/home/einze/Pictures/ss", NULL};
 static const char *filemgr[] = {"nautilus", NULL};
 static const char *volmgr[] = {"myxer", NULL};
 static const char *screenlock[] = { "i3lock-fancy-rapid", "9", "30", NULL};
+static const char *spndcmd[] = {"i3lock-face-rapid", "9", "30", "&&", "systemctl", "suspend", "-i", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,6 +85,8 @@ static const Key keys[] = {
 	{ MODKEY,			XK_v,	   spawn,	   {.v = volmgr}},
 	{ MODKEY,			XK_f,	   spawn,	   {.v = filemgr}},
 	{ MODKEY|ShiftMask,		XK_Escape, spawn,	   {.v = screenlock}},
+	{ MODKEY,			XK_Print,  spawn,	   {.v = screenshotcmd}},
+	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = spndcmd}},
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
